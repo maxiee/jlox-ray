@@ -12,6 +12,15 @@ import java.nio.file.Paths;
 
 public class App {
 
+    private static void run(String source) {
+        // Scanner scanner = newScanner(source);
+        // List<Token> tokens = scanner.scanTokens();
+
+        // for (Token token: tokens) {
+        //     System.out.println(token);
+        // }
+    }
+
     private static void runFile(String path) throws IOException {
         byte[] bytes = Files.readAllBytes(Paths.get(path));
         //run(new String(bytes, Charset.defaultCharset()));

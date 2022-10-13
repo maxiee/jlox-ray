@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class App {
+    static boolean hadError = false;
 
     private static void run(String source) {
         // Scanner scanner = newScanner(source);
@@ -56,6 +57,6 @@ public class App {
     private static void report(int line, String where, String message) {
         System.err.println(
                 "[line " + line + "] Error" + where + ": " + message);
-        // hadError = true;
+         hadError = true;
     }
 }

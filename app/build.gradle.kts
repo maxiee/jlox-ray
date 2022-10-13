@@ -26,5 +26,11 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("jlox.ray.App")
+    mainClass.set("jlox.ray.Lox")
+}
+
+val jar by tasks.getting(Jar::class) {
+    manifest {
+        attributes["Main-Class"] = "jlox.ray.Lox"
+    }
 }

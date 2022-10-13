@@ -6,9 +6,9 @@ package jlox.ray;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class LoxTest {
     @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        Lox classUnderTest = new Lox();
+        //assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 }

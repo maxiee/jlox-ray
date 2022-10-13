@@ -1,12 +1,18 @@
 {
-    "configurations": [
-        {
-          "type": "gradle",
-          "name": "gradle run",
-          "tasks": [
-            "run"
-          ],
-        },
-
-    ]
+  "configurations": [
+    {
+      "type": "gradle",
+      "name": "gradle run",
+      "tasks": [
+        "run"
+      ]
+    },
+    {
+      "type": "gradle",
+      "name": "gradle assemble",
+      "tasks": [
+        "assemble"
+      ]
+    }
+  ]
 }

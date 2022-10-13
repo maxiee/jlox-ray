@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class App {
+public class Lox {
     static boolean hadError = false;
 
     private static void run(String source) {
@@ -43,6 +43,8 @@ public class App {
     }
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Hello lox");
+
         if (args.length > 1) {
             System.out.println("Usage: jlox [script]");
             System.exit(64);

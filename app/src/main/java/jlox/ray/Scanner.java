@@ -70,6 +70,13 @@ public class Scanner {
             case '>':
                 addToken(match('=') ? TokenType.GREATER_EQUAL : TokenType.GREATER);
                 break;
+            case '/':
+                if (match('/')) {
+                    // ignore comment
+                    while (peek() != '\n' && !isAtEnd()) advance();
+                } else {
+                    addToken(TokenType.SLASH);
+                }
           default:
               Lox.error(line, "Unexpected character.");
               break;
@@ -90,6 +97,11 @@ public class Scanner {
 
     private void addToken(TokenType type) {
         addToken(type, null);
+    }
+
+    private char peek() {
+        if (isAtEnd()) return '\0';
+        return source.charAt(current);
     }
 
     private void addToken(TokenType type, Object literal) {

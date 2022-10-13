@@ -1,1 +1,1 @@
-java -jar .\app\build\libs\app.jar
+java -jar .\app\build\libs\app.jar %*

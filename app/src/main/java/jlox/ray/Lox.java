@@ -43,7 +43,12 @@ public class Lox {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Hello lox");
+        System.out.println(args[0].equals("genast"));
+
+        if (args.length == 2 && args[0].equals("genast")) {
+            GenerateAst.gen(args[1]);
+            System.exit(0);
+        }
 
         if (args.length > 1) {
             System.out.println("Usage: jlox [script]");

@@ -77,6 +77,15 @@ public class Scanner {
                 } else {
                     addToken(TokenType.SLASH);
                 }
+                break;
+            case ' ':
+            case '\r':
+            case '\t':
+                // Ignore whitespaces
+                break;
+            case '\n':
+                line++;
+                break;
           default:
               Lox.error(line, "Unexpected character.");
               break;
@@ -85,6 +94,12 @@ public class Scanner {
 
     private char advance() {
         return source.charAt(current++);
+    }
+
+    private char peek() {
+        if (isAtEnd()) return '\0';
+        // lookahead
+        return source.charAt(current);
     }
 
     private boolean match(char expected) {
@@ -97,11 +112,6 @@ public class Scanner {
 
     private void addToken(TokenType type) {
         addToken(type, null);
-    }
-
-    private char peek() {
-        if (isAtEnd()) return '\0';
-        return source.charAt(current);
     }
 
     private void addToken(TokenType type, Object literal) {

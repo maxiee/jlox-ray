@@ -2,6 +2,16 @@ package jlox.ray;
 
 import java.util.List;
 
+/**
+ * The grammar of Lax
+ * expression  -> equality
+ * equality    -> comparision ( ( "!=" | "==" ) ) comparision )*
+ * comparision -> term ( ( ">" | ">=" | "<" | "<=" ) term )*
+ * term        -> factor ( ( "-" | "+" ) factor )*
+ * factor      -> unary ( ( "/" | "*" ) unary )*
+ * unary       -> ("!" | "-") unary | primary
+ * primary     -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")"
+ */
 public class Parser {
     private static class ParseError extends RuntimeException {
     }

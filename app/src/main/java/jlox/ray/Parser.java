@@ -142,6 +142,11 @@ public class Parser {
         }
     }
 
+    /**
+     * 匹配当前 Token 是否在 types 列表中
+     * 如果在返回 true，同时前进到下一个 Token
+     * 如果不再返回 false
+     */
     private boolean match(TokenType... types) {
         for (TokenType type : types) {
             if (check(type)) {

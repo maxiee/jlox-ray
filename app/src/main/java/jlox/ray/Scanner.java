@@ -80,7 +80,7 @@ public class Scanner {
                 addToken(TokenType.SEMICOLON);
                 break;
             case '*':
-                addToken(TokenType.STARA);
+                addToken(TokenType.STAR);
                 break;
             case '!':
                 addToken(match('=') ? TokenType.BANG_EQUAL : TokenType.BANG);

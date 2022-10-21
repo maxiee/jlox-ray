@@ -5,8 +5,6 @@ package jlox.ray;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class LoxTest {
     @Test
     public void appHasAGreeting() {
@@ -21,7 +19,7 @@ public class LoxTest {
                         new Token(TokenType.MINUS, "-", null, 1),
                         new Expr.Literal(123)
                 ),
-                new Token(TokenType.STARA, "*", null, 1),
+                new Token(TokenType.STAR, "*", null, 1),
                 new Expr.Grouping(
                         new Expr.Literal(45.67)
                 )

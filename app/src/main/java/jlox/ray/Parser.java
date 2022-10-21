@@ -144,27 +144,6 @@ public class Parser {
         }
     }
 
-    private void synchronzie() {
-        advance();
-
-        while (!isAtEnd()) {
-            if (previous().type == TokenType.SEMICOLON) return;
-
-            switch (peek().type) {
-                case CLASS:
-                case FUN:
-                case VAR:
-                case IF:
-                case WHILE:
-                case PRINT:
-                case RETURN:
-                    return;
-            }
-
-            advance();
-        }
-    }
-
     /**
      * 匹配当前 Token 是否在 types 列表中
      * 如果在返回 true，同时前进到下一个 Token

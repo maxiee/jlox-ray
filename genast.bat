@@ -1,0 +1,1 @@
+.\run.bat genast D:\Ray\Code\Java\jlox-ray\app\src\main\java\jlox\ray\

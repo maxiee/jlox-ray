@@ -9,6 +9,7 @@ import java.util.List;
 public class GenerateAst {
     public static void gen(String outputDir) throws IOException {
         defineAst(outputDir, "Expr", Arrays.asList(
+                "Assign : Token name, Expr value",
                 "Binary : Expr left, Token operator, Expr right",
                 "Grouping : Expr expression",
                 "Literal : Object value",

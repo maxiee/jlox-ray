@@ -1,0 +1,6 @@
+var a = "I'm outer";
+
+{
+    var a = "I'm inner";
+    print a;
+}

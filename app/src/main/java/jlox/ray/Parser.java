@@ -100,6 +100,7 @@ public class Parser {
         while (!check(TokenType.RIGHT_BRACE) && !isAtEnd()) {
             statements.add(declaration());
         }
+        consume(TokenType.RIGHT_BRACE, "Expect '}' after block.");
         return statements;
     }
 

@@ -72,7 +72,7 @@ public class Parser {
 
     private Stmt printStatement() {
         Expr value = expression();
-        consume(TokenType.SEMICOLON, "Expect ‘；’ after value.");
+        consume(TokenType.SEMICOLON, "Expect ‘;’ after value.");
         return new Stmt.Print(value);
     }
 
@@ -84,13 +84,13 @@ public class Parser {
             initializer = expression();
         }
 
-        consume(TokenType.SEMICOLON, "Expect ‘；’ after value.");
+        consume(TokenType.SEMICOLON, "Expect ‘;’ after value.");
         return new Stmt.Var(name, initializer);
     }
 
     private Stmt expressionStatement() {
         Expr expr = expression();
-        consume(TokenType.SEMICOLON, "Expect ‘；’ after value.");
+        consume(TokenType.SEMICOLON, "Expect ‘;’ after value.");
         return new Stmt.Expression(expr);
     }
 

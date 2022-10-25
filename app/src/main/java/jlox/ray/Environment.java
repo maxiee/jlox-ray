@@ -43,6 +43,7 @@ public class Environment {
 
         if (enclosing != null) {
             enclosing.assign(name, value);
+            return;
         }
 
         throw new RuntimeError(name, "Undefined variable '" + name.lexeme + "'.");
